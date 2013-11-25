@@ -16,3 +16,4 @@ app.get('*', function(req, res, next) {
 });
 
 http.createServer(app).listen(8080);
+console.log('Listen to port 8080, open http://localhost:8080');

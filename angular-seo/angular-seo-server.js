@@ -1,6 +1,7 @@
 var system = require('system');
 var server = require('webserver').create();
 var pages = require('webpage');
+var results = {};
 
 var FORCE_TIMEOUT_MS = 3000;
 
@@ -13,9 +14,14 @@ var port = parseInt(system.args[1], 10);
 var urlPrefix = system.args[2];
 
 var renderHtml = function(url, renderDone) {
+  if (results[url]) {
+    return renderDone(results[url]);
+  }
+  console.log(url);
   var page = pages.create();
   var forceSendTimeout;
   var send = function() {
+    results[url] = page.content;
     renderDone(page.content);
     clearTimeout(forceSendTimeout);
     page.close();
