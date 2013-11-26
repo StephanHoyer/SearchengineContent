@@ -2,7 +2,7 @@ angular.module('uiRouterSample')
 
     // A RESTful factory for retreiving contacts from 'contacts.json'
   .factory('contacts', ['$http', '$timeout', function ($http, $timeout, utils) {
-    var path = 'http://localhost:8080//contacts.json';
+    var path = 'http://localhost:8080/api/contacts.json';
     var contacts = $http.get(path).then(function (resp) {
       return $timeout(function() {
         return resp.data.contacts;

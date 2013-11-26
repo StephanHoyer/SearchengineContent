@@ -6,21 +6,21 @@
      <meta name="fragment" content="!" />
 
     <!-- using twitter bootstrap, but of course -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/styles/bootstrap.min.css">
     <!-- styles for ng-animate are located here -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/styles.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/styles/styles.css">
 
     <!-- Include both angular.js and angular-ui-router.js-->
-    <script src="http://localhost:8080/lib/angular-1.1.4.js"></script>
-    <script src="http://localhost:8080/build/angular-ui-router.js"></script>
+    <script src="http://localhost:8080/scripts/angular-1.1.4.js"></script>
+    <script src="http://localhost:8080/scripts/angular-ui-router.js"></script>
 
     <!-- module.js declares the uiRouterSample module and adds items to $rootScope-->
-    <script src="http://localhost:8080/module.js"></script>
+    <script src="http://localhost:8080/scripts/module.js"></script>
     <!-- factory.js defines a 'contacts' http service and a 'utils' global functions service -->
-    <script src="http://localhost:8080/factory.js"></script>
+    <script src="http://localhost:8080/scripts/factory.js"></script>
     <!-- state.js takes care of all the state configuration, where all the magic's at-->
-    <script src="http://localhost:8080/states.js"></script>
-    <script src="http://localhost:8080/angular-seo/angular-seo.js"></script>
+    <script src="http://localhost:8080/scripts/states.js"></script>
+    <script src="http://localhost:8080/scripts/angular-seo.js"></script>
 
     <!-- could easily use a custom property of the state here instead of 'name' -->
     <title ng-bind="$state.current.name + ' - ui-router'">ui-router</title>

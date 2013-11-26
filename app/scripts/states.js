@@ -66,7 +66,7 @@ angular.module('uiRouterSample')
             // Example of loading a template from a file. This is also a top level state,
             // so this template file will be loaded and then inserted into the ui-view
             // within index.html.
-            templateUrl: 'http://localhost:8080/contacts.html',
+            templateUrl: 'http://localhost:8080/templates/contacts.html',
 
             // Use `resolve` to resolve any asynchronous controller dependencies
             // *before* the controller is instantiated. In this case, since contacts
@@ -118,7 +118,7 @@ angular.module('uiRouterSample')
             // template will be inserted into the ui-view within this state's
             // parent's template; so the ui-view within contacts.html. This is the
             // most important thing to remember about templates.
-            templateUrl: 'http://localhost:8080/contacts.list.html'
+            templateUrl: 'http://localhost:8080/templates/contacts.list.html'
           })
 
           ///////////////////////
@@ -155,7 +155,7 @@ angular.module('uiRouterSample')
 
               // So this one is targeting the unnamed view within the parent state's template.
               '': {
-                templateUrl: 'http://localhost:8080/contacts.detail.html',
+                templateUrl: 'http://localhost:8080/templates/contacts.detail.html',
                 controller: ['$scope', '$stateParams', 'utils',
                   function (  $scope,   $stateParams,   utils) {
                     $scope.contact = utils.findById($scope.contacts, $stateParams.contactId);
@@ -199,7 +199,7 @@ angular.module('uiRouterSample')
               // We wouldn't have to do it this way if we didn't also want to set the 'hint' view below.
               // We could instead just set templateUrl and controller outside of the view obj.
               '': {
-                templateUrl: 'http://localhost:8080/contacts.detail.item.html',
+                templateUrl: 'http://localhost:8080/templates/contacts.detail.item.html',
                 controller: ['$scope', '$stateParams', '$state', 'utils',
                   function (  $scope,   $stateParams,   $state,   utils) {
                     $scope.item = utils.findById($scope.contact.items, $stateParams.itemId);
@@ -234,7 +234,7 @@ angular.module('uiRouterSample')
               // essentially swapping out the template that 'contact.detail.item' had
               // had inserted with this state's template.
               '@contacts.detail': {
-                templateUrl: 'http://localhost:8080/contacts.detail.item.edit.html',
+                templateUrl: 'http://localhost:8080/templates/contacts.detail.item.edit.html',
                 controller: ['$scope', '$stateParams', '$state', 'utils',
                   function (  $scope,   $stateParams,   $state,   utils) {
                     $scope.item = utils.findById($scope.contact.items, $stateParams.itemId);

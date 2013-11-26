@@ -27,8 +27,9 @@ var renderHtml = function(url, renderDone) {
     page.close();
   };
   forceSendTimeout = setTimeout(send, FORCE_TIMEOUT_MS);
+  console.log(JSON.stringify(page.settings));
   page.settings.loadImages = false;
-  page.settings.loadCSS = false;
+  page.settings.loadStyles = false;
   page.settings.localToRemoteUrlAccessEnabled = true;
   page.onCallback = send;
   page.onConsoleMessage = function(msg, lineNum, sourceId) {
