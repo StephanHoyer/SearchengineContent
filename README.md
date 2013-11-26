@@ -19,3 +19,8 @@ Run
 * Go to [http://localhost:8080](http://localhost:8080) to see the basic application. 
 * Go to [http://localhost:8888](http://localhost:8888) to see the prerendered
   version of the  application.
+
+Credits
+--
+
+https://github.com/steeve/angular-seo
